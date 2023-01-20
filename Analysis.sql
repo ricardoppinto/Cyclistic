@@ -28,14 +28,14 @@ GROUP BY
 --Bike type distribution per user type
 
 SELECT
-      rideable_type, 
-      COUNT(rideable_type) AS usage_total,
-      COUNT(*) FILTER (WHERE member_casual = 'member') AS members,
-      COUNT(*) FILTER (WHERE member_casual = 'casual') AS casuals
+      member_casual,
+      COUNT(*) FILTER (WHERE rideable_type = 'classic_bike') AS classic_bike,
+      COUNT(*) FILTER (WHERE rideable_type = 'docked_bike') AS docked_bike,
+      COUNT(*) FILTER (WHERE rideable_type = 'electric_bike') AS electric_bike
 FROM 
       cyclistic_data
 GROUP BY
-      rideable_type
+      member_casual
       
       
       
