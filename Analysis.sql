@@ -121,7 +121,7 @@ SELECT
 FROM
       cyclistic_data
 WHERE 
-      start_station_name IS NOT NULL
+      end_station_name IS NOT NULL
 GROUP BY
       end_station_name,
       end_lat,
