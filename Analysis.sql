@@ -98,6 +98,8 @@ SELECT
       COUNT(*) FILTER (WHERE member_casual = 'casual' ) AS casuals
 FROM
       cyclistic_data
+WHERE 
+      start_station_name IS NOT NULL
 GROUP BY
       start_station_name,
       start_lat,
@@ -118,6 +120,8 @@ SELECT
       COUNT(*) FILTER (WHERE member_casual = 'casual' ) AS casuals
 FROM
       cyclistic_data
+WHERE 
+      start_station_name IS NOT NULL
 GROUP BY
       end_station_name,
       end_lat,
